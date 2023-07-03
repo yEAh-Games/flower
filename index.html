@@ -1,134 +1,157 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Claim Your Free Flower! | yEAh Games</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.yeahgames.net/img/branding/logos/default/logo.svg">
-    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-      html,body {
-    background: url(https://cdn.yeahgames.net/img/flower/flower.png) no-repeat center center fixed;
-    -webkit-background-size: cover; /* For WebKit*/
-    -moz-background-size: cover;    /* Mozilla*/
-    -o-background-size: cover;      /* Opera*/
-    background-size: cover;         /* Generic*/
-}
+        html,
+        body {
+            background: url(https://cdn.yeahgames.net/img/flower/flower.png) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            /* For WebKit*/
+            -moz-background-size: cover;
+            /* Mozilla*/
+            -o-background-size: cover;
+            /* Opera*/
+            background-size: cover;
+            /* Generic*/
+        }
 
-@import url('https://fonts.googleapis.com/css?family=Cairo|Tajawal&amp;display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.card-wrap{
-    height: 12.65rem;
-    width: 27.15rem;
-    border-radius: 0.37rem;
-    perspective: 1000px;
-}
-.card{
-    height: inherit;
-    width: inherit;
-    position: relative;
-    transition: transform 1s;
-    transform-style: preserve-3d; 
-}
-.card-front,.card-back{
-    position: absolute;
-    height: inherit;
-    width: inherit;
-    backface-visibility: hidden;
-    border-radius: 0.37rem;
-}
-.card-front{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1DA1F2;
-}
-.card-back{
-    background-color: #CCD6DD;
-    transform: rotateY(180deg);
-}
-.card-back .user img{
-    width: 35%;
-    float: left;
-    border-radius: 50%;
-    margin: 1.6rem 1.1rem;
-    box-shadow: 3px 3px 10px #66757F;
-}
-.card-wrap:hover .card{
-    transform: rotateY(180deg);
-}
-.user-info{
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: #292F33;
-    padding: 1.9rem 1.1rem;
-}
-.user-info .username{
-    font-size: 1.0rem;
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   color: #ff4747;
-}
-.user-info .user-bio{
-    font-size: 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 1.1rem 0;
-}
-.follow-btn{
-    padding: 5px;
-    width: 9rem;
-    color: #E1E8ED;
-    background-color: #1DA1F2;
-    border: 0;
-    font-weight: normal;
-    font-size: 0.8rem;
-    border-radius: 0.27rem;
-    font-family: 'Cairo', sans-serif;
-    margin:5px auto;
-}
-.follow-btn:hover{
-    cursor: pointer;
-    background-color: #444444;
-    color: white;
-}
-.middlepage{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-    </style> 
-    </head>
-    <body>
-      <div class="card-wrap middlepage">
+        @import url('https://fonts.googleapis.com/css?family=Cairo|Tajawal&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card-wrap {
+            height: 12.65rem;
+            width: 27.15rem;
+            border-radius: 0.37rem;
+            perspective: 1000px;
+        }
+
+        .card {
+            height: inherit;
+            width: inherit;
+            position: relative;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            height: inherit;
+            width: inherit;
+            backface-visibility: hidden;
+            border-radius: 0.37rem;
+        }
+
+        .card-front {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1DA1F2;
+        }
+
+        .card-back {
+            background-color: #CCD6DD;
+            transform: rotateY(180deg);
+        }
+
+        .card-back .user img {
+            width: 35%;
+            float: left;
+            border-radius: 50%;
+            margin: 1.6rem 1.1rem;
+            box-shadow: 3px 3px 10px #66757F;
+        }
+
+        .card-wrap:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .user-info {
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: #292F33;
+            padding: 1.9rem 1.1rem;
+        }
+
+        .user-info .username {
+            font-size: 1.0rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ff4747;
+        }
+
+        .user-info .user-bio {
+            font-size: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 1.1rem 0;
+        }
+
+        .follow-btn {
+            padding: 5px;
+            width: 9rem;
+            color: #E1E8ED;
+            background-color: #1DA1F2;
+            border: 0;
+            font-weight: normal;
+            font-size: 0.8rem;
+            border-radius: 0.27rem;
+            font-family: 'Cairo', sans-serif;
+            margin: 5px auto;
+        }
+
+        .follow-btn:hover {
+            cursor: pointer;
+            background-color: #444444;
+            color: white;
+        }
+
+        .middlepage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-wrap middlepage">
         <div class="card">
             <div class="card-front">
                 <div class="card-logo">
-                   <img src="https://yeaharchives.files.wordpress.com/2022/04/cropped-cropped-yeahgames-removebg-preview.png"/>
+                    <img src="https://cdn.yeahgames.net/img/branding/logos/default/logo.png""/>
                 </div>
             </div>
 
-            <div class="card-back">
-                <div class="user">
-                    <img src="https://yeaharchives.files.wordpress.com/2022/04/cropped-cropped-yeahgames-removebg-preview.png" href="https://yeahgames.net">
-                </div>
-                <div class="user-info">
-                    <div class="username"><b>CLAIM YOUR FREE FLOWER!</b></div>
-                    <div class="user-bio"><font size="-1">Sponsored by Raid Shadow Legends!</font>
+            <div class=" card-back">
+                    <div class="user">
+                        <img src="https://cdn.yeahgames.net/img/branding/logos/default/logo.svg">
                     </div>
-                    <a href="https://yeahgames.net/flower/claim"> <button class="follow-btn">Claim!</button></a>
+                    <div class="user-info">
+                        <div class="username"><b>CLAIM YOUR FREE FLOWER!</b></div>
+                        <div class="user-bio">
+                            <font size="-1">Sponsored by Raid Shadow Legends!</font>
+                        </div>
+                        <a href="https://yeahgames.net/flower/claim"> <button class="follow-btn">Claim!</button></a>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-    <div class="blog"><a href=""></a></div>
-    
-    
-    </body>
-    </html>
+        <div class="blog"><a href=""></a></div>
+
+
+</body>
+
+</html>
